@@ -1,0 +1,22 @@
+###
+
+GET http://localhost:4004/sandbox/OrderItemSet?$apply=aggregate(price with sum as total)
+
+
+###
+
+GET http://localhost:4004/sandbox/OrderSet?$apply=aggregate(items/price with sum as total)
+
+
+###
+
+GET http://localhost:4004/sandbox/OrderSet
+
+###
+
+POST http://localhost:4004/sandbox/OrderSet
+Content-Type: application/json
+
+{
+    "orderedBy": "Palle"
+}
